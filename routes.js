@@ -94,6 +94,7 @@ router.patch('/:id',async (req,res)=>{
 
 //Delete an invoice
 router.delete('/:id',async (req,res)=>{
+    const {id} = req.params
     if(ObjectId.isValid(id)){
         try{
             const {id} = req.params
