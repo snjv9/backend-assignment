@@ -1,0 +1,45 @@
+
+No Frontend has been implemented to test this API.Please use a backend testing
+tool (eg. Postman).
+
+run $:npm install
+    $:npm start
+
+
+Routes:
+1. To view all the invoices 
+    use get request: localhost:5000/api
+
+2. To view the invoices with particular status(Paid,Outstanding,Late)
+    use get request: localhost:5000/api/status
+    ex: localhost:5000/api/Paid
+
+3. To update the status of an invoice provide id and pass status in body
+    use patch request: localhost:5000/api/id 
+    ex:  localhost:5000/api/60fab5a9bc534d1bee9097c2
+    body: "status":"Paid"
+
+4. To enter a new invoice 
+    use post request: localhost:5000/api
+    ex: localhost:5000/api
+    body:   {
+            "customerName": "Sam",
+            "workHours": 4,
+            "workRelatedExpenses": 700,
+            "materials": 1500,
+            "dueDate": "2021-06-30",
+            "status": "Late",
+        }
+
+5. To send a paricular invoice to an email address   
+    use post request: localhost:5000/api/send/id
+    ex: localhost:5000/api/send/60fab5a9bc534d1bee9097c2
+    body: {
+        to: "Reciever's_email_id",
+        subject: "Example_Subject",
+        text: "Example_text",    
+    }                   
+
+6. To delete an invoice
+    use delete request : localhost:5000/api/id
+    ex: localhost:5000/api/60fab5a9bc534d1bee9097c2

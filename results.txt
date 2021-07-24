@@ -1,0 +1,1 @@
+{"_id":"60fbaf30edeabf1e8666effb","customerName":"Andrew","workHours":2,"rate":100,"labour":300,"workRelatedExpenses":600,"materials":2000,"totalAmount":3100,"dueDate":"2021-06-20T00:00:00.000Z","status":"Paid","__v":0}
